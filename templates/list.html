@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Value A</th>
+                <th>Value B</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in data%}
+            <tr>
+                <td>{{data.value_a}}</td>
+                <td>{{data.value_b}}</td>
+                <td>{{data.result}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="del" method="post">
+        {% csrf_token %}
+        <input type="submit" value="清除記錄">
+    </form>
+</body>
+</html>

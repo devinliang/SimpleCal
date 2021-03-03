@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數字計算</title>
+</head>
+<body>
+    <form action="/cal" method="post">
+        {% csrf_token %}
+    數字一 <input type="number" name="va" id="va"> +
+    數字二 <input type="number" name="vb" id="vb">
+    <input type="submit" value="進行計算">
+    </form>
+</body>
+</html>
